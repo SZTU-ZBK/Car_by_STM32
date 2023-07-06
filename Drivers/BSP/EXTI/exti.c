@@ -25,7 +25,7 @@ void exti_init(void)
 void SR04_Init(void)
 {
 	GPIO_InitTypeDef gpio_init_struct = {0};//定义一个引脚初始化的结构体  
-	__HAL_RCC_GPIOC_CLK_ENABLE();//使能GPIOA的时钟
+	__HAL_RCC_GPIOC_CLK_ENABLE();//使能GPIOC的时钟
 	gpio_init_struct.Pin = GPIO_PIN_8;   
 	gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;        /* 推挽式复用功能 */
 	gpio_init_struct.Pull = GPIO_PULLUP;          /* 上拉 */

@@ -1,5 +1,7 @@
 ---
 typora-root-url: IMG
+
+
 ---
 
 ## 项目目标
@@ -27,7 +29,7 @@ typora-root-url: IMG
 
 ## 二、实现流程
 
-<img src="/car.png" alt="智能小车实物图" style="zoom:150%;" />
+<img src="F:\32_CODE\END、小车控制\IMG\car.png" alt="智能小车实物图" style="zoom:150%;" />
 
 ?                                                                                          
 
@@ -37,11 +39,11 @@ typora-root-url: IMG
 
 电机采用GMR巨磁阻编码器，单位时间内脉冲数量较多，因此采用定时器的编码器模式进行脉冲计数。
 
-<img src="/encoder.png" alt="encoder" style="zoom: 200%;" />
+<img src="F:\32_CODE\END、小车控制\IMG\encoder.png" alt="encoder" style="zoom: 200%;" />
 
 
 
-<img src="/PID.png" alt="PID" style="zoom:150%;" />②超声波测距
+<img src="F:\32_CODE\END、小车控制\IMG\PID.png" alt="PID" style="zoom:150%;" />②超声波测距
 
 #### ②超声波测距
 
@@ -53,23 +55,23 @@ typora-root-url: IMG
 
 如图当超声波测距小于25cm时，蜂鸣器开始蜂鸣提示。
 
-![bee](/bee.png)
+![bee](F:\32_CODE\END、小车控制\IMG\bee.png)
 
 #### ④小程序控制（蓝牙转串口）
 
 下位机采用HC-08（蓝牙转串口）模块进行串口通信控制，小程序端非本项目团队自行开发，在做产品调研时我们通过蓝牙测试偶然间得到了易方体微信小程序的蓝牙控制协议，在对该公司通信协议进行适配后，实现了使用该公司的小程序控制本项目开发的智能小车。
 
-<img src="/app_control.png" alt="app_control" style="zoom:200%;" />
+<img src="F:\32_CODE\END、小车控制\IMG\app_control.png" alt="app_control" style="zoom:200%;" />
 
 
 
-<img src="/usart.png" alt="usart" style="zoom:200%;" />
+<img src="F:\32_CODE\END、小车控制\IMG\usart.png" alt="usart" style="zoom:200%;" />
 
 #### ⑤舵机控制
 
 当启动避障模式时，由于超声波方向需要舵机转角进行控制，每个四个时钟周期判断一次舵机转向，并通过定时器输出PWM波进行舵机角度控制（74为正前方，24为正左方，124为正右方）。
 
-![舵机控制](/舵机控制.png)
+![](F:\32_CODE\END、小车控制\IMG\舵机控制.png)
 
 ## 三、后续规划
 
